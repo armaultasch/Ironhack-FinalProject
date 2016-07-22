@@ -47,3 +47,46 @@
     width: 100px;
     height: 100px;
 }*/
+
+body {
+ background-color: #e8e5d5;
+}
+.wrapper-header {
+    font-size: 1.6em;
+    height: 60px;
+    position: relative;
+}
+header {
+    display: block;
+        margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.wrapper-header .wrapper-header-inner, .wrapper-footer .wrapper-footer-inner {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+div {
+	    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+.wrapper-header .logo {
+    display: inline-block;
+    line-height: 60px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 123px;
+    vertical-align: top;
+    margin-right: 20px;
+    position: relative;
+}
+

@@ -45,7 +45,7 @@ $(document).ready(function(){
 		$('.js-activity-modal').modal("hide");
 
 		$('.js-time-modal').modal("show");
-		
+
 	});
 
 		$('.button-back3').on("click", function(){
@@ -55,4 +55,5 @@ $(document).ready(function(){
 	});
 		// $('.button-next').on("click", function(show details){
 });
+
 
