@@ -1,8 +1,194 @@
 <!-- index.html.erb -->
+ <head>
 
-<h1> Welcome to Heroku! </h1>
+
+
+</head>
+<title> FitFinder</title>
+<h1> Welcome to The FitFinder </h1>
+<h2> Finding the best classes for <strong>YOU</strong> </h2>
 <!-- if use below then also have to -->
 <!-- config->environments->production.rb change to config.assets.compile = true -->
 <!-- <img src="/assets/unicorn.gif"> -->
+<h3> Our Mission </h3>
+<p class="about"> FitFind is a way to bring what you like to do to your fingertips in seconds.  We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!<p>
+<br>
+<h3> About Us </h3>
+<p class="about"> FitFind is a way to bring what you like to do to your fingertips in seconds.  We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!<p>
 
-<%= image_tag "unicorn.gif" %>
+	<br>
+
+<%= image_tag "addiction.png", height:300, width:350 %>
+<aside>
+
+  <button class="button-start">
+    <span class="glyphicon glyphicon-plus"></span>
+    Find Your Fit!
+  </button>
+
+</aside>
+
+<footer> <a href="https://www.healthiergeneration.org/live_healthier/eat_healthier/?gclid=CjwKEAjwiMe8BRD0ts3Vtv-ohWgSJAAZurk1smVwNtCuQc2F01bDSiqK43uOkeP_BHc9R3GeK8xiIRoCzsDw_wcB">Healthy Eating </a>
+
+	<a href="https://www.instagram.com/fittlyss/?hl=en"> Social Media </a>
+</footer>
+<!-- location modal -->
+<div class="modal fade js-location-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          <span class="js-location-name">Where are you?</span>
+          <!-- <small class="js-location-number">#160</small> -->
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+        <ul class="dl-horizontal">
+          
+          <li class="btn hover active js-location-brickell">Brickell</li><br>
+          <h2></h2>
+
+          
+          <li class="btn hover active js-location-wynwood">Wynwood</li><br>
+			<h2></h2>
+          
+          <li class="btn hover active js-location-downtown">Downtown</li><br>
+          <h2></h2>
+
+          <li class="btn hover active js-location-miamibeach">Miami Beach</li><br>
+          <h2></h2>
+
+          
+          
+        </ul>
+        <button class="button-back1">
+    
+    Back
+  </button>
+          <button class="button-next1">
+    
+    Next ->
+  </button>
+
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<!-- activity modal -->
+
+<div class="modal fade js-activity-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          <span class="js-activity-name">What Do You Like To Do?</span>
+          <!-- <small class="js-location-number">#160</small> -->
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+        <ul class="dl-horizontal">
+          
+          <li class="btn hover active js-activity-yoga">Yoga</li><br>
+           <h2></h2>
+
+          
+          <li class="btn hover active js-activity-crossfit">Cross Fit</li><br>
+			 <h2></h2>
+          
+          <li class="btn hover active js-activity-pilates">Pilates</li><br>
+           <h2></h2>
+
+          <li class="btn hover active js-activity-barre">Barre</li><br>
+          <h2></h2>
+
+		 <li class="btn hover active js-activity-box">Boxing</li><br>
+		  <h2></h2>
+
+          
+          
+        </ul>
+        <button class="button-back2">
+    
+    Back
+  </button>
+          <button class="button-next2">
+    
+    Next ->
+  </button>
+
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<!-- activity modal -->
+
+<div class="modal fade js-time-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          <span class="js-activity-name">When do you like to get sweaty?!</span>
+          <!-- <small class="js-location-number">#160</small> -->
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+        <ul class="dl-horizontal">
+          
+          <li class="btn hover js-time-one">5am-8am</li><br>
+           <h2></h2>
+
+          
+          <li class="btn hover js-time-two">9am-12pm</li><br>
+           <h2></h2>
+
+          
+          <li class="btn hover js-time-three">1pm-4pm</li><br>
+           <h2></h2>
+
+          <li class="btn hover js-time-four">5pm-8pm</li><br>
+           <h2></h2>
+
+	
+
+          
+          
+        </ul>
+        <button class="button-back3">
+    
+    Back
+  </button>
+          <button class="button-next3">
+    
+    See Results Near You!
+  </button>
+
+
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->

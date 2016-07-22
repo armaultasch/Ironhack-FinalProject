@@ -12,5 +12,47 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+//= require bootstrap
+
+$(document).ready(function(){
+	
+	$('.button-start').on("click", function(){
+		$('.js-location-modal').modal("show");
+	});
+		$('.button-next1').on("click", function(){
+		$('.js-location-modal').modal("hide");
+
+		$('.js-activity-modal').modal("show");
+
+          
+	});
+		$('.button-back1').on("click", function(){
+		$('.js-location-modal').modal("hide");
+
+	});
+
+		$('.button-back2').on("click", function(){
+		$('.js-activity-modal').modal("hide");
+
+		$('.js-location-modal').modal("show");
+	});
+
+		$('.button-next2').on("click", function(){
+
+		$('.js-activity-modal').modal("hide");
+
+		$('.js-time-modal').modal("show");
+		
+	});
+
+		$('.button-back3').on("click", function(){
+		$('.js-time-modal').modal("hide");
+
+		$('.js-activity-modal').modal("show");
+	});
+		// $('.button-next').on("click", function(show details){
+});
+
