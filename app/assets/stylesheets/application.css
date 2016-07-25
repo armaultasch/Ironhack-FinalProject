@@ -13,6 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+ .image_background {
+  background-image: url("mixed_running.jpg");
+    background-size: cover;
+    z-index: 100;
+   opacity: 1;
+
+    
+}
+
+.disppear {
+  opacity: 0;
+}
+
+.appear {
+  opacity: 1;
+}
+
+
+
+ body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper-header {
+    font-size: 1.6em;
+    height: 60px;
+    position: relative;
+}
+
 .btn {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -40,45 +72,11 @@
   text-decoration: none;
 }
 
-/*.btn:active {
-    font-size: 18px;
-    border: 2px solid red;
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
-}*/
 
-body {
- background-color: #e8e5d5;
-}
-.wrapper-header {
-    font-size: 1.6em;
-    height: 60px;
-    position: relative;
-}
-header {
-    display: block;
-        margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
-.wrapper-header .wrapper-header-inner, .wrapper-footer .wrapper-footer-inner {
-    margin: 0 auto;
-    padding: 0 10px;
-}
-div {
-	    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    display: block;
-}
+
+
+html { overflow-y: scroll; }
 .wrapper-header .logo {
     display: inline-block;
     line-height: 60px;
@@ -89,4 +87,5 @@ div {
     margin-right: 20px;
     position: relative;
 }
+
 
