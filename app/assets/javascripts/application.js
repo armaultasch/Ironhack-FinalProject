@@ -19,12 +19,11 @@
 
 $(document).ready(function(){
   console.log("suhhhh");
-  $('.whole-page').removeClass("image_background");
-  $('.whole-page').removeClass("disppear");
+
 	
 	$('.button-start').on("click", function(){
 
-      $('.bye').removeClass("appear");
+    
      $('.bye').addClass("disppear");
      $('.whole-page').addClass("image_background");
     
@@ -37,7 +36,7 @@ $(document).ready(function(){
 
   });
 
-  $('.modal').on('hidden.bs.modal', function(){
+  $('.js-location-modal').on('hidden.bs.modal', function(){
      $('.bye').removeClass("disappear");
     
     $('.whole-page').removeClass("image_background");
@@ -46,9 +45,14 @@ $(document).ready(function(){
   });
 
 		$('.button-next1').on("click", function(){
+
 		$('.js-location-modal').modal("hide");
+ $('.bye').removeClass("appear");
+     $('.bye').addClass("disppear");
+     $('.whole-page').addClass("image_background");
 
 		$('.js-activity-modal').modal("show");
+
 
           
 	});
