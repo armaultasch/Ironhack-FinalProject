@@ -1,9 +1,8 @@
 <!-- index.html.erb -->
 
-
-<html>
   <div class="whole-page image_background">
 <div class="bye">
+
 
 <nav class="navbar navbar-default">
   <div class="container">
@@ -48,7 +47,15 @@
         <li>
          <a href="https://github.com/armaultasch" title="GitHub">About Me: Blog</a>
        </li>
-      
+         <li class="dropdown platform">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Contact Us</a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li><a href="http://allrecipes.com/recipes/87/everyday-cooking/vegetarian/">Phone</a></li>
+            <li><a href="http://allrecipes.com/recipes/741/healthy-recipes/gluten-free/" title="Gluten">Address</a></li>
+           
+           
+          </ul>
+        </li>
     
       </ul>
     </div>
@@ -64,66 +71,56 @@
         </h1>
         <h4 class="text-center editable" id="subheading">
           FitFind is a way to bring what you like to do to your fingertips in seconds.  We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!
-          
+
         </h4>
+
+        <img src = "/assets/addiction.png" height="200" width= 250>
       </div>
-      <div class="col-xs-12">
-        <object id="panda-ruby" type="image/svg+xml" data="images/home/panda-ruby.svg">
-          <div></div>
-        </object>
-      </div>
+      
     </div>
   </div>
 </div>
-<div class="container-fluid">
-  <div class="container sign-up-home text-center">
+
+<footer>
+
+  <div class="text-center">
     <div class="row">
-      <div class="col-xs-12">
-        <h4 class="light editable" id="start">
-          Start developing your apps on our AWS account or yours for free today.
+
+        <h4 >
+          FitFind is a way to bring what you like to do to your fingertips in seconds.
         </h4>
-        <h4 class="editable" id="coaches">
-          We’ve deployed it all — our coaches are ready to help you.
+        <h4 >
+           We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!
         </h4>
-      </div>
-    </div>
+
+
     <div class="row">
       <form class="form-inline panda-signup-submit" accept-charset="UTF-8" action="https://login.engineyard.com/signup" method="get">
         <input name="source" type="hidden" value="cloud">
         <input name="pandastyle" type="hidden" value="true">
-        <div class="col-xs-12 col-sm-6 text-right">
-          <div class="form-group">
+       <!--  <div class="col-xs-12 col-sm-6 text-right"> -->
+          <!-- <div class="form-group">
             <label class="sr-only" for="user_signup_email">Email</label>
             <input type="email" required="true" name="email" class="form-control input-lg" id="user_signup_email" placeholder="Type your email address">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 text-left">
-          <button type="submit" id="panda-signup-submit-button" class="btn btn-primary btn-lg">Get Started Today</button>
-        </div>
+          </div> -->
+      <!--   </div> -->
+       
       </form>
-    </div>
-  </div>
-</div>
-
-
-<!-- if use below then also have to -->
-<!-- config->environments->production.rb change to config.assets.compile = true -->
-<!-- <img src="/assets/unicorn.gif"> -->
-<br>
-<h3> About Us </h3>
-<p class="about"> FitFind is a way to bring what you like to do to your fingertips in seconds.  We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!<p>
-
-	<br>
-
-<%= image_tag "addiction.png", height:300, width:350 %>
-<aside>
-
-  <button class="button-start">
+        <button class="btn button-start">
     <span class="glyphicon glyphicon-plus"></span>
     Find Your Fit!
   </button>
 
-</aside>
+    </div>
+  </div>
+</div>
+
+</footer>
+<!-- if use below then also have to -->
+<!-- config->environments->production.rb change to config.assets.compile = true -->
+<!-- <img src="/assets/unicorn.gif"> -->
+
+
 
 
 
@@ -288,4 +285,4 @@
     </div><!-- .modal-content -->
   </div><!-- .modal-dialog -->
 </div><!-- .modal -->
-</html>
+  
