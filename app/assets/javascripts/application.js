@@ -23,7 +23,7 @@ $(document).ready(function(){
 	
 	$('.button-start').on("click", function(){
 
-    
+      $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.whole-page').addClass("image_background");
     
@@ -47,17 +47,20 @@ $(document).ready(function(){
 		$('.button-next1').on("click", function(){
 
 		$('.js-location-modal').modal("hide");
- $('.bye').removeClass("appear");
-     $('.bye').addClass("disppear");
-     $('.whole-page').addClass("image_background");
+
 
 		$('.js-activity-modal').modal("show");
-
+    // $('.bye').removeClass("appear");
+    //  $('.bye').toggle("disppear");
+     $('.js-location-modal').addClass("appear");
+     $('.js-location-modal').removeClass("disappear");
+     $('.js-activity-modal').addClass("image_background");
 
           
 	});
 		$('.button-back1').on("click", function(){
 		$('.js-location-modal').modal("hide");
+
 
 	});
 
@@ -72,6 +75,9 @@ $(document).ready(function(){
 		$('.js-activity-modal').modal("hide");
 
 		$('.js-time-modal').modal("show");
+    $('.js-activity-modal').addClass("appear");
+     $('.js-activity-modal').removeClass("disappear");
+     $('.js-time-modal').addClass("image_background")
 
 	});
 

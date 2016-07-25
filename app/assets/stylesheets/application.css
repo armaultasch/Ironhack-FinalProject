@@ -17,8 +17,8 @@
  .image_background {
   background-image: url("/assets/mixed_running.jpg");
     background-size: cover;
-    z-index: 100;
-   opacity: 1;
+   
+ 
 
     
 }

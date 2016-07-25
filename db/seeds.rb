@@ -6,3 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Brickell = Area.create(name: "Brickell")
+Wynwood = Area.create(name: "Wynwood")
+DTMiami = Area.create(name: "Downtown Miami")
+SouthBeach = Area.create(name: "South Beach")
+NMiami = Area.create(name: "North Miami")
+
+Yoga = Type.create(name: "Yoga", description: "Recharge yourself", area_id: Brickell.name)
