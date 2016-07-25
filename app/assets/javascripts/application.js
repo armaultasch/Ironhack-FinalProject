@@ -18,6 +18,7 @@
 //= require bootstrap
 
 $(document).ready(function(){
+  console.log("suhhhh");
   $('.whole-page').removeClass("image_background");
   $('.whole-page').removeClass("disppear");
 	
