@@ -60,6 +60,15 @@ html { overflow-y: scroll; }
     font-size: 1.6em;
     height: 60px;
     position: relative;
+    text-align: inline;
+}
+
+.top-words {
+  text-align: left;
+  top: 10px;
+  margin-left: -80px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .btn {
@@ -170,11 +179,14 @@ div {
 }
 
 footer {
-  /*display: table;*/
+  display: table;
      background-color: #fff;
      border-color: #e7e7e7;
-     bottom: 0px;
-     top: 100px;
+     bottom: 0;
+    height: 30px;
 padding: 10px;
      width: 100%;
+     position: fixed;
+
+
 }

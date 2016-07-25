@@ -25,7 +25,7 @@ $(document).ready(function(){
 
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
-     $('.whole-page').addClass("image_background");
+     $('.js-location-modal').addClass("image_background");
     
     
 
