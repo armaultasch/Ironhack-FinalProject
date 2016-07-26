@@ -17,12 +17,12 @@
 //= require_tree .
 //= require bootstrap
 
-$(document).ready(function(){
+$(document).ready(function(event){
   console.log("suhhhh");
 
 	
-	$('.button-start').on("click", function(){
-
+	$('.button-start').on("click", function(event){
+    
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.js-location-modal').addClass("image_background");
@@ -142,9 +142,9 @@ $(document).ready(function(){
 
       
       var details = `
-      <ul>
+      <ul>Activity Type:
        <li> ${x.activity} </li>
-       <li> ${x.time} </li>
+       Where?
        <li> ${x.area} </li>
 
     
