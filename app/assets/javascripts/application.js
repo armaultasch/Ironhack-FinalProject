@@ -125,7 +125,39 @@ $(document).ready(function(){
 		$('.js-location-modal').modal("show");
 	});
 
-		$('.btn-act').on("click", function(){
+		$('.btn-act').on("click", function (event){
+
+      event.preventDefault();
+
+      var studAct = $(event.currentTarget).text().toLowerCase();
+      $.ajax({
+        type: "GET",
+        url: "/api/studios/" + studAct,
+      success: function(response){
+        console.log(response);
+       
+     //    var activityArray = []
+     //    response.forEach(function (act){
+     //      activityArray.push(act.activity);
+     //    });
+     //    console.log(activityArray);
+        
+     // $('.js-location-modal').addClass("appear");
+     // $('.js-location-modal').removeClass("disappear");
+     // $('.js-activity-modal').addClass("image_background");
+    
+
+
+     $('.js-activity-modal').modal("show");
+      },
+      error: function (error) {
+      console.log("Error!!");
+    }  
+  });
+ 
+
+
+
 
 		$('.js-activity-modal').modal("hide");
 

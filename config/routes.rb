@@ -6,6 +6,10 @@ resources :studios
 get "/api/studios/brickell" => "studio#brickell"
 get "/api/studios/downtown" => "studio#downtown"
 get "/api/studios/wynwood" => "studio#wynwood"
+get "/api/studios/yoga" => "studio#yoga"
+get "/api/studios/barre" => "studio#barre"
+get "/api/studios/boxing" => "studio#boxing"
+get "/api/studios/pilates" => "studio#pilates"
 
 
 
