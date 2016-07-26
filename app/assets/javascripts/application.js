@@ -138,13 +138,20 @@ $(document).ready(function(){
         
        console.log(response);
 
+    response.forEach(function (x) {
 
-     //    var activityArray = []
       
-     //      activityArray.push(act.activity);
-     //    });
-     //    console.log(activityArray);
-        
+      var details = `
+      <ul>
+       <li> ${x.activity} </li>
+       <li> ${x.time} </li>
+       <li> ${x.area} </li>
+
+    
+        </ul>
+ 
+      `; $(".js-time-name").append(details);
+    });
      // $('.js-location-modal').addClass("appear");
      // $('.js-location-modal').removeClass("disappear");
      // $('.js-activity-modal').addClass("image_background");
