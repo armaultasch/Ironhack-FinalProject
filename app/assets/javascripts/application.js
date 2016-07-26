@@ -46,7 +46,7 @@ $(document).ready(function(){
 
   $('.js-location-modal').on('hidden.bs.modal', function(){
      $('.bye').removeClass("disappear");
-     
+
     
     $('.whole-page').removeClass("image_background");
     $('.bye').addClass("appear");
@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 		$('.js-location-btn').on("click", function (event) {
       event.preventDefault();
-      
+
       var studArea = $(event.currentTarget).text().toLowerCase();
       $.ajax({
         type: "GET",
@@ -125,7 +125,7 @@ $(document).ready(function(){
 		$('.js-location-modal').modal("show");
 	});
 
-		$('.button-next2').on("click", function(){
+		$('.btn-act').on("click", function(){
 
 		$('.js-activity-modal').modal("hide");
 
@@ -144,6 +144,9 @@ $(document).ready(function(){
 		// $('.button-next').on("click", function(show details){
 });
 
+// $('.button-result').on("click", function () {
+//   redirect_t
+// });
 var t;
 var seekers = [];
 
