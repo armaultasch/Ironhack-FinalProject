@@ -26,7 +26,10 @@ $(document).ready(function(){
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.js-location-modal').addClass("image_background");
-    
+    $(".js-activity-box").addClass("hidden");
+    $(".js-activity-yoga").addClass("hidden");
+    $(".js-activity-pilates").addClass("hidden");
+    $(".js-activity-barre").addClass("hidden");
     
 
 
@@ -36,28 +39,77 @@ $(document).ready(function(){
 
   });
 
+
+
+
+
+
   $('.js-location-modal').on('hidden.bs.modal', function(){
      $('.bye').removeClass("disappear");
+     
     
     $('.whole-page').removeClass("image_background");
     $('.bye').addClass("appear");
 
   });
 
-		$('.button-next1').on("click", function(){
+		$('.js-location-btn').on("click", function (event) {
+      event.preventDefault();
+      
+      var studArea = $(event.currentTarget).text().toLowerCase();
+      $.ajax({
+        type: "GET",
+        url: "/api/studios/" + studArea,
+      success: function(response){
+        console.log(response);
+        $('.js-location-modal').modal("hide");
+        var activityArray = []
+        response.forEach(function (act){
+          activityArray.push(act.activity);
+        });
+        console.log(activityArray);
+        
 
-		$('.js-location-modal').modal("hide");
+        if (activityArray.includes("Yoga")) {
+          $(".js-activity-yoga").removeClass("hidden");
 
+        }
+        if (activityArray.includes("Pilates")) {
+          $(".js-activity-pilates").removeClass("hidden");
 
-		$('.js-activity-modal').modal("show");
+        }
+
+         if (activityArray.includes("Barre")) {
+          $(".js-activity-barre").removeClass("hidden");
+
+        }
+
+         if (activityArray.includes("Boxing")) {
+          $(".js-activity-box").removeClass("hidden");
+        }
     // $('.bye').removeClass("appear");
     //  $('.bye').toggle("disppear");
      $('.js-location-modal').addClass("appear");
      $('.js-location-modal').removeClass("disappear");
      $('.js-activity-modal').addClass("image_background");
+    
 
-          
+
+     $('.js-activity-modal').modal("show");
+      },
+      error: function (error) {
+      console.log("Error!!");
+    }  
 	});
+      });
+
+
+
+
+
+
+
+
 		$('.button-back1').on("click", function(){
 		$('.js-location-modal').modal("hide");
 
@@ -66,7 +118,10 @@ $(document).ready(function(){
 
 		$('.button-back2').on("click", function(){
 		$('.js-activity-modal').modal("hide");
-
+    $(".js-activity-box").addClass("hidden");
+    $(".js-activity-yoga").addClass("hidden");
+    $(".js-activity-pilates").addClass("hidden");
+    $(".js-activity-barre").addClass("hidden");
 		$('.js-location-modal').modal("show");
 	});
 

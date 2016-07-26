@@ -35,7 +35,9 @@
   opacity: 1;
 }
 
-
+.hidden {
+display: none;
+}
 
 body {
     font-family: "GalanoGrotesque-Regular", Helvetica, Arial, sans-serif;

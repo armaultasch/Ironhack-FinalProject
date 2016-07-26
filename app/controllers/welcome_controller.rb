@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
 	def index
-		render :index
+		@studio_array = Studio.all
+		
+		render "index"
+
 		
 	end
 end
