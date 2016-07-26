@@ -6,10 +6,18 @@ resources :studios
 get "/api/studios/brickell" => "studio#brickell"
 get "/api/studios/downtown" => "studio#downtown"
 get "/api/studios/wynwood" => "studio#wynwood"
-get "/api/studios/yoga" => "studio#yoga"
-get "/api/studios/barre" => "studio#barre"
-get "/api/studios/boxing" => "studio#boxing"
-get "/api/studios/pilates" => "studio#pilates"
+get "/api/studios/wynwood/yoga" => "studio#yogawyn"
+get "/api/studios/wynwood/barre" => "studio#barrewyn"
+get "/api/studios/wynwood/boxing" => "studio#boxingwyn"
+get "/api/studios/wynwood/pilates" => "studio#pilateswyn"
+get "/api/studios/downtown/yoga" => "studio#yogadt"
+get "/api/studios/downtown/barre" => "studio#barredt"
+get "/api/studios/downtown/boxing" => "studio#boxingdt"
+get "/api/studios/downtown/pilates" => "studio#pilatesdt"
+get "/api/studios/brickell/yoga" => "studio#yogabrick"
+get "/api/studios/brickell/barre" => "studio#barrebrick"
+get "/api/studios/brickell/boxing" => "studio#boxingbrick"
+get "/api/studios/brickell/pilates" => "studio#pilatesbrick"
 
 
 

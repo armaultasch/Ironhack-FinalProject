@@ -20,26 +20,83 @@ class StudioController < ApplicationController
 
 	end
 
-	def yoga
-			act = Studio.where(activity: "Yoga")
+
+
+
+
+
+
+	def yogawyn
+			act = Studio.where(activity: "Yoga", area: "Wynwood")
 		
 		render json: act.to_json
 
 	end
-	def boxing
-			act = Studio.where(activity: "Boxing")
+	def yogabrick
+			act = Studio.where(activity: "Yoga", area: "Brickell")
 		
 		render json: act.to_json
 
 	end
-	def pilates
-			act = Studio.where(activity: "Pilates")
+	def yogadt
+			act = Studio.where(activity: "Yoga", area: "Downtown")
 		
 		render json: act.to_json
 
 	end
-	def barre
-			act = Studio.where(activity: "Barre")
+	def boxingdt
+			act = Studio.where(activity: "Boxing", area: "Downtown")
+		
+		render json: act.to_json
+
+	end
+
+	def boxingwyn
+			act = Studio.where(activity: "Boxing", area: "Wynwood")
+		
+		render json: act.to_json
+
+	end
+	def boxingbrick
+			act = Studio.where(activity: "Boxing", area: "Brickell")
+		
+		render json: act.to_json
+
+	end
+	def pilateswyn
+			act = Studio.where(activity: "Pilates", area: "Wynwood")
+		
+		render json: act.to_json
+
+	end
+	def pilatesdt
+			act = Studio.where(activity: "Pilates", area: "Downtown")
+		
+		render json: act.to_json
+
+	end
+
+	def pilatesbrick
+			act = Studio.where(activity: "Pilates", area: "Brickell")
+		
+		render json: act.to_json
+
+	end
+	def barrebrick
+			act = Studio.where(activity: "Barre", area: "Brickell")
+		
+		render json: act.to_json
+
+	end
+	def barredt
+			act = Studio.where(activity: "Barre", area: "Downtown")
+		
+		render json: act.to_json
+
+	end
+
+	def barrewyn
+			act = Studio.where(activity: "Barre", area: "Wynwood")
 		
 		render json: act.to_json
 

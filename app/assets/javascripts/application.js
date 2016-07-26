@@ -54,9 +54,11 @@ $(document).ready(function(){
   });
 
 		$('.js-location-btn').on("click", function (event) {
-      event.preventDefault();
+
 
       var studArea = $(event.currentTarget).text().toLowerCase();
+      $('.js-activity-name').data("area", studArea)
+
       $.ajax({
         type: "GET",
         url: "/api/studios/" + studArea,
@@ -92,15 +94,15 @@ $(document).ready(function(){
      $('.js-location-modal').addClass("appear");
      $('.js-location-modal').removeClass("disappear");
      $('.js-activity-modal').addClass("image_background");
-    
 
 
      $('.js-activity-modal').modal("show");
+     
       },
       error: function (error) {
       console.log("Error!!");
     }  
-	});
+	}); 
       });
 
 
@@ -126,18 +128,19 @@ $(document).ready(function(){
 	});
 
 		$('.btn-act').on("click", function (event){
-
-      event.preventDefault();
-
+      studArea = $('.js-activity-name').data("area")
+   
       var studAct = $(event.currentTarget).text().toLowerCase();
       $.ajax({
         type: "GET",
-        url: "/api/studios/" + studAct,
+        url: "/api/studios/" + studArea + "/" + studAct,
       success: function(response){
-        console.log(response);
-       
+        
+       console.log(response);
+
+
      //    var activityArray = []
-     //    response.forEach(function (act){
+      
      //      activityArray.push(act.activity);
      //    });
      //    console.log(activityArray);
