@@ -1,19 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  area_id: 1
+  name: MyString
+  address: MyString
+  phone: MyString
   lat: 9.99
   lng: 9.99
-  name: MyString
-  phone: MyString
-  address: MyString
-  type_id: 1
+  area: MyString
+  activity: MyString
+  time: 2016-07-26 09:32:22
+  description: MyString
 
 two:
-  area_id: 1
+  name: MyString
+  address: MyString
+  phone: MyString
   lat: 9.99
   lng: 9.99
-  name: MyString
-  phone: MyString
-  address: MyString
-  type_id: 1
+  area: MyString
+  activity: MyString
+  time: 2016-07-26 09:32:22
+  description: MyString
