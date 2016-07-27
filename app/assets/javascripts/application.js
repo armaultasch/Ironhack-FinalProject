@@ -18,11 +18,12 @@
 //= require bootstrap
 
 $(document).ready(function(event){
+  
   console.log("suhhhh");
 
 	
 	$('.button-start').on("click", function(event){
-
+    event.preventDefault();
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.js-location-modal').addClass("image_background");

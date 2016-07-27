@@ -39,7 +39,7 @@
 display: none;
 }
 
-body {
+.whole-page, .bye {
     font-family: "GalanoGrotesque-Regular", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.42857;
