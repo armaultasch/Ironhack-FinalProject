@@ -23,7 +23,7 @@ $(document).on("turbolinks:load", function(event){
 
 	
 	$('.button-start').on("click", function(event){
-    event.preventDefault();
+ 
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.js-location-modal').addClass("image_background");
@@ -238,6 +238,8 @@ function mouseReleased() {
   }
 
 }
+
+
 
 function Seeker() {
 

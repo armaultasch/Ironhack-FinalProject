@@ -1,34 +1,115 @@
 <!-- show.html.erb -->
-<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+</head>
+
 <div class="whole-page">
-<h1> Results </h1>
-<div class="results-page">
-	<h2> You selected <%= @activity_name %> in <%= @area_name %> </h2>
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a href="/" class="navbar-brand svg" title="Engine Yard">
+        <object id="logo" class="logo" type="image/svg+xml" data="/images/global/engine-yard-pink.svg">
+          <div></div>
+        </object>
+      </a> -->
+      <h4 class="top-words">Welcome to the FitFinder!</h4>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown platform">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Healthy Eating</a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li><a href="http://allrecipes.com/recipes/87/everyday-cooking/vegetarian/">Vegetarian Eating</a></li>
+            <li><a href="http://allrecipes.com/recipes/741/healthy-recipes/gluten-free/" title="Gluten">Gluten Free Eating</a></li>
+            <li><a href="http://allrecipes.com/recipes/738/healthy-recipes/dairy-free/" title="Dairy">Dairy Free Eating</a></li>
+            <li><a href="http://blog.myfitnesspal.com/20-meat-lover-meals-under-400-calories/" title="Meat">Meat Lovers</a></li>
+            <li><a href="http://www.countryliving.com/food-drinks/g1331/healthy-desserts/">Desserts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown services">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Services">Social Media</a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li><a href="http://www.harpersbazaar.com/beauty/diet-fitness/g4018/inspiring-fitness-girls-on-instagram/">Inspiration</a></li>
+            <li><a href="https://www.facebook.com/ScottFishmanNYC?fref=ts">Facebook: Motivation</a></li>
+             <li><a href="https://www.instagram.com/fittlyss/?hl=en">Instagram: Fitness</a></li>
+            <li><a href="https://twitter.com/fltness?lang=en">Twitter: Fitness & Health</a></li>
+            <li><a href="https://twitter.com/BeFitMotivation?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter: Motivation</a></li>
+           
+          </ul>
+        </li>
+        <li>
+         <a href="https://github.com/armaultasch" title="GitHub">About Me: Blog</a>
+       </li>
+         <li class="dropdown platform">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Contact Us</a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li><a href="http://allrecipes.com/recipes/87/everyday-cooking/vegetarian/">Phone</a></li>
+            <li><a href="http://allrecipes.com/recipes/741/healthy-recipes/gluten-free/" title="Gluten">Address</a></li>
+           
+           
+          </ul>
+        </li>
+     <li>
+         <a href="https://www.youtube.com/results?search_query=training+" title="training">Training Videos</a>
+       </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+		<div class="row1">
+			
+		
+				<h1> Results </h1>
+
+	<h2> You selected <%= @activity_name %> in <%= @area_name %> <button><h4>
+          <a class="button-result" href="/">
+    
+    Not right? Go Back</a>
+  </button></h4></h2>
+	
+
 </div>
 
-<ul class="today-class"> 
+<div class="row2">
+	<div class="col-sm-4">
+<ul class="today-class scrollable-menu"> 
 	<h2> Classes Available Today </h2>
 		<% @activity_today.each do |today|%>
-			<li>
+			<li class="class-time">
 				<%= today.name%><br>
-				<a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
+				<%= today.activity%><br>
+				<%= today.time%><br>
+				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
 
 				<img src="/assets/phone.png" height="20" width="20"><%= today.phone%><br>	
-				<%= today.activity%>
+				
 		
 		<%= today.description%><br>
-		<%= today.time%><br>
+		
 		
 	
 
 			</li>
 		<% end %>
 	</ul>
-	
-<ul class="tomorrow-class">
+	</div>
+	<div class="col-sm-4">
+
+<ul class="tomorrow-class scrollable-menu">
 	<h2> Tomorrow </h2>
 	<% @activity_tmr.each do |tmr|%>
-			<li>
+			<li class="class-time">
 				<%= tmr.activity%>
 		<%= tmr.time %>
 		
@@ -36,27 +117,44 @@
 			</li>
 		<% end %>
 	</ul>
-	<ul class="others">
+</div>
+<div class="col-sm-4">
+	<ul class="others scrollable-menu">
 		<h2>Later this week</h2>
 	<% @act.each do |show| %>
-	<li>
+	<li class="class-time">
 		<%= show.name %><br>
 		<%= show.address %><br>
 		<%= show.phone %><br>
 		<%= show.activity %><br>
 		<%= show.area %><br>
 		<%= show.time %><br>
-		<%= show.description %><br>
+		<%= show.description %>
 
 
 	</li>
 <% end %>
 </ul>
 
-
-<button>
-          <a class="button-result" href="/">
-    
-    Not right? Go Back</a>
-  </button>
 </div>
+</div>
+</div>
+
+<footer>
+
+  <div class="footer-fix text-center footer">
+    <div class="row">
+
+        <h4 >
+          FitFind is a way to bring what you like to do to your fingertips in seconds.
+        </h4>
+        <h4 >
+           We aim to find the best places and prices for your needs to ensure you not only get a good work out, but are doing the work out you enjoy!
+        </h4>
+
+
+   
+  </div>
+</div>
+
+</footer>
