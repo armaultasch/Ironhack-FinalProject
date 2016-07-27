@@ -17,8 +17,8 @@
 //= require_tree .
 //= require bootstrap
 
-$(document).ready(function(event){
-  
+$(document).on("turbolinks:load", function(event){
+
   console.log("suhhhh");
 
 	
@@ -76,24 +76,29 @@ $(document).ready(function(event){
 
         if (activityArray.includes("Yoga")) {
           $(".js-activity-yoga").removeClass("hidden");
+          $(".js-activity-yoga a").attr("href", `/welcome/${studArea}/yoga`);
 
         }
         if (activityArray.includes("Pilates")) {
           $(".js-activity-pilates").removeClass("hidden");
+          $(".js-activity-pilates a").attr("href", `/welcome/${studArea}/pilates`);
 
         }
          if (activityArray.includes("Cycling")) {
           $(".js-activity-cycle").removeClass("hidden");
+          $(".js-activity-cycle a").attr("href", `/welcome/${studArea}/cycling`);
 
         }
 
          if (activityArray.includes("Barre")) {
           $(".js-activity-barre").removeClass("hidden");
+          $(".js-activity-barre a").attr("href", `/welcome/${studArea}/barre`);
 
         }
 
          if (activityArray.includes("Boxing")) {
           $(".js-activity-box").removeClass("hidden");
+          $(".js-activity-box a").attr("href", `/welcome/${studArea}/boxing`);
         }
     // $('.bye').removeClass("appear");
     //  $('.bye').toggle("disppear");
@@ -134,62 +139,62 @@ $(document).ready(function(event){
 		$('.js-location-modal').modal("show");
 	});
 
-		$('.btn-act').on("click", function (event){
-      studArea = $('.js-activity-name').data("area")
+		// $('.btn-act').on("click", function (event){
+  //     studArea = $('.js-activity-name').data("area")
    
-      var studAct = $(event.currentTarget).text().toLowerCase();
-      $.ajax({
-        type: "GET",
-        url: "/api/studios/" + studArea + "/" + studAct,
-      success: function(response){
+  //     var studAct = $(event.currentTarget).text().toLowerCase();
+  //     $.ajax({
+  //       type: "GET",
+  //       url: "/api/studios/" + studArea + "/" + studAct,
+  //     success: function(response){
         
-       console.log(response);
+  //      console.log(response);
 
-    response.forEach(function (x) {
+  //   response.forEach(function (x) {
 
       
-      var details = `
-      <ul>Activity Type:
-       <li> ${x.activity} </li>
-       Where?
-       <li> ${x.area} </li>
+  //     var details = `
+  //     <ul>Activity Type:
+  //      <li> ${x.activity} </li>
+  //      Where?
+  //      <li> ${x.area} </li>
 
     
-        </ul>
+  //       </ul>
  
-      `; $(".js-time-name").append(details);
-    });
-     // $('.js-location-modal').addClass("appear");
-     // $('.js-location-modal').removeClass("disappear");
-     // $('.js-activity-modal').addClass("image_background");
+  //     `; $(".js-time-name").append(details);
+  //   });
+  //    // $('.js-location-modal').addClass("appear");
+  //    // $('.js-location-modal').removeClass("disappear");
+  //    // $('.js-activity-modal').addClass("image_background");
     
 
 
-     $('.js-activity-modal').modal("show");
-      },
-      error: function (error) {
-      console.log("Error!!");
-    }  
-  });
+  //    $('.js-activity-modal').modal("show");
+  //     },
+  //     error: function (error) {
+  //     console.log("Error!!");
+  //   }  
+  // });
  
 
 
 
 
-		$('.js-activity-modal').modal("hide");
+	// 	$('.js-activity-modal').modal("hide");
 
-		$('.js-time-modal').modal("show");
-    $('.js-activity-modal').addClass("appear");
-     $('.js-activity-modal').removeClass("disappear");
-     $('.js-time-modal').addClass("image_background")
+	// 	$('.js-time-modal').modal("show");
+ //    $('.js-activity-modal').addClass("appear");
+ //     $('.js-activity-modal').removeClass("disappear");
+ //     $('.js-time-modal').addClass("image_background")
 
-	});
+	// });
 
-		$('.button-back3').on("click", function(){
-		$('.js-time-modal').modal("hide");
+	// 	$('.button-back3').on("click", function(){
+	// 	$('.js-time-modal').modal("hide");
 
-		$('.js-activity-modal').modal("show");
-	});
+	// 	$('.js-activity-modal').modal("show");
+	// });
 		// $('.button-next').on("click", function(show details){
 });
 
