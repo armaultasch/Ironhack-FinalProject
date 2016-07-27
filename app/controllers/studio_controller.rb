@@ -101,4 +101,24 @@ class StudioController < ApplicationController
 		render json: act.to_json
 
 	end
+
+	def cyclewyn
+			act = Studio.where(activity: "Cycling", area: "Wynwood")
+		
+		render json: act.to_json
+
+	end
+		def cycledt
+			act = Studio.where(activity: "Cycling", area: "Downtown")
+		
+		render json: act.to_json
+
+	end
+
+		def cyclebrick
+			act = Studio.where(activity: "Cycling", area: "Brickell")
+		
+		render json: act.to_json
+
+	end
 end

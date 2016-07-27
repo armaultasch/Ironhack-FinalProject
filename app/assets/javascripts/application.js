@@ -22,7 +22,7 @@ $(document).ready(function(event){
 
 	
 	$('.button-start').on("click", function(event){
-    
+
       $('.bye').removeClass("appear");
      $('.bye').addClass("disppear");
      $('.js-location-modal').addClass("image_background");
@@ -30,6 +30,7 @@ $(document).ready(function(event){
     $(".js-activity-yoga").addClass("hidden");
     $(".js-activity-pilates").addClass("hidden");
     $(".js-activity-barre").addClass("hidden");
+    $(".js-activity-cycle").addClass("hidden");
     
 
 
@@ -80,6 +81,10 @@ $(document).ready(function(event){
           $(".js-activity-pilates").removeClass("hidden");
 
         }
+         if (activityArray.includes("Cycling")) {
+          $(".js-activity-cycle").removeClass("hidden");
+
+        }
 
          if (activityArray.includes("Barre")) {
           $(".js-activity-barre").removeClass("hidden");
@@ -124,6 +129,7 @@ $(document).ready(function(event){
     $(".js-activity-yoga").addClass("hidden");
     $(".js-activity-pilates").addClass("hidden");
     $(".js-activity-barre").addClass("hidden");
+    $(".js-activity-cycling").addClass("hidden");
 		$('.js-location-modal').modal("show");
 	});
 
