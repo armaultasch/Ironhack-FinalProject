@@ -1,19 +1,62 @@
 <!-- show.html.erb -->
+<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+<div class="whole-page">
 <h1> Results </h1>
 <div class="results-page">
 	<h2> You selected <%= @activity_name %> in <%= @area_name %> </h2>
 </div>
 
+<ul class="today-class"> 
+	<h2> Classes Available Today </h2>
+		<% @activity_today.each do |today|%>
+			<li>
+				<%= today.name%><br>
+				<a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
+
+				<img src="/assets/phone.png" height="20" width="20"><%= today.phone%><br>	
+				<%= today.activity%>
+		
+		<%= today.description%><br>
+		<%= today.time%><br>
+		
+	
+
+			</li>
+		<% end %>
+	</ul>
+	
+<ul class="tomorrow-class">
+	<h2> Tomorrow </h2>
+	<% @activity_tmr.each do |tmr|%>
+			<li>
+				<%= tmr.activity%>
+		<%= tmr.time %>
+		
+
+			</li>
+		<% end %>
+	</ul>
+	<ul class="others">
+		<h2>Later this week</h2>
+	<% @act.each do |show| %>
+	<li>
+		<%= show.name %><br>
+		<%= show.address %><br>
+		<%= show.phone %><br>
+		<%= show.activity %><br>
+		<%= show.area %><br>
+		<%= show.time %><br>
+		<%= show.description %><br>
+
+
+	</li>
+<% end %>
+</ul>
 
 
 <button>
           <a class="button-result" href="/">
     
-    No, Go Back</a>
+    Not right? Go Back</a>
   </button>
-
-  <button>
-    
-    
-    Yes! Show me my results!</a>
-  </button>
+</div>
