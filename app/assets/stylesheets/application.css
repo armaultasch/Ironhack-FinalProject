@@ -281,10 +281,11 @@ html {
   border-radius: 10px;
   text-align: center;
   height: 100px;
-  margin: auto;
+  margin: right;
   width: 200;
   border: 3px solid green;
-  padding: 10px;
+  padding-right: 15px;
+
 
 }
 
