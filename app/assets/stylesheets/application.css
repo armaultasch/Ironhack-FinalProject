@@ -28,9 +28,26 @@
     background-size: cover;
     width: 100%;
     height: 80vh;
+    color: black;
 
 }
 
+.home-background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+* {
+    box-sizing: border-box;
+}
 .image-two {
   background-image: url("/assets/run.jpg");
 /*  opacity: .6;*/
@@ -72,19 +89,6 @@ display: none;
   width: 100%;
   height: auto;
   
-  /* Set up positioning */
- /* position: fixed;
-  top: 0;
-  left: 0;*/
-
-
-
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
-background: rgb(212,228,239); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=0 ); /* IE6-9 */
 }
 
 
@@ -150,6 +154,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', end
     vertical-align: top;
     margin-right: 20px;
     position: relative;
+
 }
 .wrapper-footer,  .logo {
     display: inline-block;
@@ -270,15 +275,15 @@ html {
   margin: 40px;
   width: 300px;
   height: 100px;
-
+background-size: cover;
 }
 .about-us {
     min-height: 650px;
-    width: 90%;
+    width: 70%;
     opacity: 0.9;
     margin: 20px;
     padding: 10px 20px 10px 10px;
-    border-right: 2px solid;
+    border-right: 3.5px solid;
     border-color: #003e7b;
     text-align: center;
 }
@@ -320,17 +325,17 @@ padding: 10px;
     opacity: 0.9;
     margin: 20px;
     padding: 10px 20px 10px 10px;
-    border-right: 2px solid;
+    border-right: 3.5px solid;
     border-color: #003e7b;
     text-align: center;
   line-height: 1.428571429;
       font-size: 14px;
 }
 
-.row2 {
+.row2, .row1 {
 
-    margin-left: -15px;
-    margin-right: -15px;
+    /*margin-left: -15px;*/
+    
         color: #333333;
 
 }
