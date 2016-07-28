@@ -1,13 +1,9 @@
 <!-- show.html.erb -->
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	
-</head>
+
 
 <div class="whole-page">
 	<nav class="navbar navbar-default">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -20,7 +16,7 @@
           <div></div>
         </object>
       </a> -->
-      <h4 class="top-words">Welcome to the FitFinder!</h4>
+      <h4><img src="/assets/girl_weights.gif" height="50" width="50"> <a href="/" class="top-words" >Welcome to the FitFinder!</a></h4>
     </div>
 
     <div class="collapse navbar-collapse">
@@ -82,11 +78,12 @@
 </div>
 
 <div class="row2">
-	<div class="col-sm-4">
-<ul class="today-class scrollable-menu"> 
+	<div class="col-lg-4">
+<ul class="today-class"> 
 	<h2> Classes Available Today </h2>
+	<div class ="scrollable-menu">
 		<% @activity_today.each do |today|%>
-			<li class="class-time">
+			<li class="class-time scrollable-menu">
 				<%= today.name%><br>
 				<%= today.activity%><br>
 				<%= today.time%><br>
@@ -102,27 +99,31 @@
 
 			</li>
 		<% end %>
+	</div>
 	</ul>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-lg-4">
 
 <ul class="tomorrow-class scrollable-menu">
 	<h2> Tomorrow </h2>
+	<div class ="scrollable-menu">
 	<% @activity_tmr.each do |tmr|%>
-			<li class="class-time">
-				<%= tmr.activity%>
+			<li class="class-time scrollable-menu">
+				<%= tmr.activity%><br>
 		<%= tmr.time %>
 		
 
 			</li>
 		<% end %>
+	</div>
 	</ul>
 </div>
-<div class="col-sm-4">
+<div class="col-lg-4">
 	<ul class="others scrollable-menu">
 		<h2>Later this week</h2>
+		<div class ="scrollable-menu">
 	<% @act.each do |show| %>
-	<li class="class-time">
+	<li class="class-time scrollable-menu">
 		<%= show.name %><br>
 		<%= show.address %><br>
 		<%= show.phone %><br>
@@ -134,6 +135,7 @@
 
 	</li>
 <% end %>
+</div>
 </ul>
 
 </div>
