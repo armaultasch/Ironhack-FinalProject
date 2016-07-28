@@ -63,7 +63,7 @@
 </nav>
 
 
-<div class="container-fluid">
+<div class="container-fluid image-two">
 		<div class="row1">
 			
 		
@@ -81,7 +81,8 @@
 <div class="row2">
 	<div class="col-sm-4">
 <ul class="today-class"> 
-	<h2> Classes Available Today </h2>
+
+	<h2 class="bottom-heading"> Classes Available Today </h2>
 	<div class ="scrollable-menu">
 		<% @activity_today.each do |today|%>
 			<li class="class-time scrollable-menu">
@@ -103,9 +104,9 @@
 	</div>
 	</ul>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-4 ">
 
-<ul class="tomorrow-class scrollable-menu">
+<ul class="tomorrow-class scrollable-menu about-us">
 	<h2> Tomorrow </h2>
 	<div class ="scrollable-menu">
 	<% @activity_tmr.each do |tmr|%>
@@ -119,8 +120,8 @@
 	</div>
 	</ul>
 </div>
-<div class="col-sm-4">
-	<ul class="others scrollable-menu">
+<div class="col-sm-4 ">
+	<ul class="others scrollable-menu about-us">
 		<h2>Later this week</h2>
 		<div class ="scrollable-menu">
 	<% @act.each do |show| %>
