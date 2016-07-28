@@ -121,7 +121,7 @@ $(document).on("turbolinks:load", function(event){
     $(".js-activity-yoga").addClass("hidden");
     $(".js-activity-pilates").addClass("hidden");
     $(".js-activity-barre").addClass("hidden");
-    $(".js-activity-cycling").addClass("hidden");
+    $(".js-activity-cycle").addClass("hidden");
 		$('.js-location-modal').modal("show");
 	});
 

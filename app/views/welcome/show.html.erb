@@ -63,10 +63,11 @@
 </nav>
 </div>
 
-<div>
+
 <img class="home-background" src="/assets/run.jpg">
-<div class="container-fluid">
-		<div class="row1">
+<div class="row">
+<div class="container-fluid slogan-container">
+		
 			
 		
 				<h1> Results </h1>
@@ -82,11 +83,14 @@
 </div>
 
 <div class="row">
+	<div class="container bottom-sec">
 	<div class="col-sm-4">
-<ul class="today-class"> 
+		<h2> Classes Available Today </h2>
+		<div class="class-today  scrollable-menu">
 
-	<h2 class="bottom-heading"> Classes Available Today </h2>
-	<div class ="scrollable-menu">
+	
+	<ul> 
+	<p class="bottom-content scrollable-menu">
 		<% @activity_today.each do |today|%>
 			<li class="class-time scrollable-menu">
 				<%= today.name%><br>
@@ -104,14 +108,18 @@
 
 			</li>
 		<% end %>
-	</div>
+		</p>
 	</ul>
-	</div>
+</div>
+</div>
 	<div class="col-sm-4 ">
+		<h2> Tomorrow </h2>
+<div class="tmr-class  scrollable-menu">
 
-<ul class="tomorrow-class scrollable-menu about-us">
-	<h2> Tomorrow </h2>
-	<div class ="scrollable-menu">
+	
+	<ul>
+		<p class="bottom-content scrollable-menu">
+	
 	<% @activity_tmr.each do |tmr|%>
 			<li class="class-time scrollable-menu">
 				<%= tmr.activity%><br>
@@ -120,13 +128,19 @@
 
 			</li>
 		<% end %>
-	</div>
+	</p>
 	</ul>
+	</div>
+	
 </div>
+
 <div class="col-sm-4 ">
-	<ul class="others scrollable-menu about-us">
-		<h2>Later this week</h2>
-		<div class ="scrollable-menu">
+	<h2>Later this week</h2>
+	<div class="all-classes scrollable-menu">
+	
+		
+		<ul>
+		<p class =" bottom-content scrollable-menu">
 	<% @act.each do |show| %>
 	<li class="class-time scrollable-menu">
 		<%= show.name %><br>
@@ -138,20 +152,22 @@
 		<%= show.description %>
 
 
-	</li>
-<% end %>
-</div>
-</ul>
+				</li>
+			<% end %>
+			</p>
+		</ul>
+	</div>
+	</div>
 
-</div>
-</div>
-</div>
+	
+	
+	</div>
 </div>
 
 <footer>
 
   <div class="footer-fix text-center footer">
-    <div class="row">
+  
 
         <h4 >
           FitFind is a way to bring what you like to do to your fingertips in seconds.
@@ -162,7 +178,7 @@
 
 
    
-  </div>
+ 
 </div>
 
 </footer>
