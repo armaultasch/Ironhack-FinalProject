@@ -191,7 +191,7 @@ display: none;
     text-indent: -9999px;
     width: 100%;
     vertical-align: top;
-    /*margin-right: 20px;*/
+    
     position: relative;
 
 }
@@ -202,7 +202,7 @@ display: none;
     
     width: 100%;
     vertical-align: bottom;
-    margin-right: 20px;
+   
     position: relative;
 }
 

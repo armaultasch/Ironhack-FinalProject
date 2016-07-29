@@ -92,6 +92,8 @@
 	<div class="container bottom-sec">
 	<div class="col-sm-4">
 		<h2> Classes Available Today </h2>
+		
+		
 		<div class="class-today  scrollable-menu">
 
 	
@@ -101,7 +103,7 @@
 			<li class="class-time scrollable-menu">
 				<%= today.name%><br>
 				<%= today.activity%><br>
-				<%= today.time%><br>
+				<%= today.time.strftime("%A, %B %d %I:%M%P")%><br>
 				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
 
 				<img src="/assets/phone.png" height="20" width="20"><%= today.phone%><br>	
