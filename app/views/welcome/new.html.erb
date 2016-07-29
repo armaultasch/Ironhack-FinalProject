@@ -1,7 +1,7 @@
-<!-- show.html.erb -->
+<!-- new.html.erb -->
 
 
-	<div class="row">
+	
 	<nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -67,117 +67,35 @@
     </div>
   </div>
 </nav>
+
+<div class="new">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-4 train">
+
+<img src="/assets/yoga.jpg" height="400" width= "500">
+<h3><a href="https://www.youtube.com/watch?v=rPd_TQWZSUQ">Yoga</a></h3>
+<img src="/assets/pilates.jpg" height="400" width= "500">
+<h3><a href="https://www.youtube.com/watch?v=2GEjVdP2YGk">Pilates</a></h3>
 </div>
-
-
-<img class="home-background" src="/assets/run.jpg">
-<div class="row">
-<div class="container-fluid slogan-container">
-		
-			
-		
-				<h1> Results </h1>
-
-	<h2> You selected <%= @activity_name %> in <%= @area_name %> <button class=" button-result btn"><h4>
-          <a class="sup" href="/">
-    
-    Not right? Go Back</a>
-  </button></h4></h2>
-	
-
+<div class="col-lg-4 train">
+	<img src="/assets/boxing.jpg" height="400" width= "500"><h3><a href="https://www.youtube.com/watch?v=Vve4BVTZ0QU">Boxing</a></h3>
+	<img src="/assets/spin.jpg" height="400" width= "500">
+	<h3><a href="https://www.youtube.com/watch?v=NOpbiP3mkJ0">Cycling</a></h3>
 </div>
-</div>
+<div class="col-lg-4 train">
+	<img src="/assets/barre.jpg" height="400" width= "500">
+	<h3><a href="https://www.youtube.com/watch?v=7rv5s5IpnYI">Barre</a></h3>
+	<img src="/assets/weight.jpg" height="400" width= "500"><h3><a href="https://www.youtube.com/watch?v=tTl6MgjL2E8">Weight Training</a></h3>
 
-<div class="row">
-	<div class="container bottom-sec">
-	<div class="col-sm-4">
-		<h2> Classes Available Today </h2>
-		
-		
-		<div class="class-today  scrollable-menu">
-
-	
-	<ul> 
-	<p class="bottom-content scrollable-menu">
-		<% @activity_today.each do |today|%>
-			<li class="class-time scrollable-menu">
-				<%= today.name%><br>
-				<%= today.activity%><br>
-				<%= today.time.strftime("%A, %B %d %I:%M%P")%><br>
-				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
-
-				<img src="/assets/phone.png" height="20" width="20"><%= today.phone%><br>	
-				
-			<div class="dropdown platform">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Description</a>
-          <div class="dropdown-menu">
-            <p><%= today.description%></p>
-            
-            </div>
-        </div>
-           <% end %> 
-          
-         
-        
-		</li>
-		</p>
-	</ul>
 </div>
 </div>
-	<div class="col-sm-4 ">
-		<h2> Tomorrow </h2>
-<div class="tmr-class  scrollable-menu">
 
-	
-	<ul>
-		<p class="bottom-content scrollable-menu">
-	
-	<% @activity_tmr.each do |tmr|%>
-			<li class="class-time scrollable-menu">
-				<%= tmr.activity%><br>
-				<%= tmr.time %>
-				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= tmr.lat %> ,<%= tmr.lng %>"><%= tmr.address%></a><br>
-	
-		<img src="/assets/phone.png" height="20" width="20"><%= tmr.phone%><br>
-		
 
-			</li>
-		<% end %>
-	</p>
-	</ul>
-	</div>
-	
+</div>
 </div>
 
-<div class="col-sm-4 ">
-	<h2>Later this week</h2>
-	<div class="all-classes scrollable-menu">
-	
-		
-		<ul>
-		<p class =" bottom-content scrollable-menu">
-	<% @act.each do |show| %>
-	<li class="class-time scrollable-menu">
-		<%= show.name %><br>
-		<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= show.lat %> ,<%= show.lng %>"><%= show.address%></a><br>
-		<img src="/assets/phone.png" height="20" width="20"><%= show.phone%><br>
-		<%= show.activity %><br>
-		<%= show.area %><br>
-		<%= show.time %><br>
-		<%= show.description %>
 
-
-				</li>
-			<% end %>
-			</p>
-		</ul>
-	</div>
-	</div>
-
-	
-	
-	</div>
-</div>
 
 <footer>
 
