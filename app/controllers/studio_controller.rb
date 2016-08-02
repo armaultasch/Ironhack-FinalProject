@@ -20,5 +20,12 @@ class StudioController < ApplicationController
 
 	end
 
+	def southbeach
+			areas = Studio.where(area: "Southbeach")
+		
+		render json: areas.to_json
+
+	end
+
 
 end

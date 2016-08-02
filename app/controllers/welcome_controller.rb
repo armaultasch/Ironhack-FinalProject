@@ -6,14 +6,21 @@ class WelcomeController < ApplicationController
 	end
 
 
-
-
-
-
 	def yogawyn
 			@act = Studio.where(activity: "Yoga", area: "Wynwood")
 			@activity_name = "Yoga"
 			@area_name = "Wynwood"
+			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
+		render "show"
+
+	end
+
+	def yogasb
+			@act = Studio.where(activity: "Yoga", area: "Southbeach")
+			@activity_name = "Yoga"
+			@area_name = "Southbeach"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
 			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
@@ -46,6 +53,18 @@ class WelcomeController < ApplicationController
 			@area_name = "Downtown"
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
+		render "show"
+
+	end
+
+	def boxingsb
+			@act = Studio.where(activity: "Boxing", area: "Southbeach")
+			@activity_name = "Boxing"
+			@area_name = "Southbeach"
+			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -56,6 +75,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Wynwood"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -65,6 +85,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Brickell"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -74,6 +95,18 @@ class WelcomeController < ApplicationController
 			@area_name = "Wynwood"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
+		render "show"
+
+	end
+
+	def pilatessb
+			@act = Studio.where(activity: "Pilates", area: "Southbeach")
+			@activity_name = "Pilates"
+			@area_name = "Southbeach"
+			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -83,6 +116,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Downtown"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -93,6 +127,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Brickell"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -102,6 +137,18 @@ class WelcomeController < ApplicationController
 			@area_name = "Brickell"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
+		render "show"
+
+	end
+
+		def barresb
+			@act = Studio.where(activity: "Barre", area: "Southbeach")
+			@activity_name = "Barre"
+			@area_name = "Southbeach"
+			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -111,6 +158,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Downtown"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 		@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+		@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -121,6 +169,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Wynwood"
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -131,6 +180,7 @@ class WelcomeController < ApplicationController
 			@area_name = "Wynwood"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
@@ -140,16 +190,28 @@ class WelcomeController < ApplicationController
 			@area_name = "Downtown"
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end
 
+	def cyclesb
+			@act = Studio.where(activity: "Cycling", area: "Southbeach")
+			@activity_name = "Cycling"
+			@area_name = "Southbeach"
+			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
+		render "show"
+
+	end
 		def cyclebrick
 			@act = Studio.where(activity: "Cycling", area: "Brickell")
 			@activity_name = "Cycling"
 			@area_name = "Brickell"
 			@activity_tmr = @act.where("time > ? and time < ?", Date.tomorrow.beginning_of_day, Date.tomorrow.end_of_day)
 			@activity_today = @act.where("time > ? and time < ?", DateTime.now.beginning_of_day, DateTime.now.end_of_day)
+			@other_activity = @act.where("time > ?", Date.tomorrow.end_of_day)
 		render "show"
 
 	end

@@ -7,6 +7,7 @@ resources :studios
 get "/api/studios/brickell" => "studio#brickell"
 get "/api/studios/downtown" => "studio#downtown"
 get "/api/studios/wynwood" => "studio#wynwood"
+get "/api/studios/southbeach" => "studio#southbeach"
 
 
 get "/welcome/wynwood/yoga" => "welcome#yogawyn"
@@ -24,6 +25,11 @@ get "/welcome/brickell/barre" => "welcome#barrebrick"
 get "/welcome/brickell/boxing" => "welcome#boxingbrick"
 get "/welcome/brickell/pilates" => "welcome#pilatesbrick"
 get "/welcome/brickell/cycling" => "welcome#cyclebrick"
+get "/welcome/southbeach/cycling" => "welcome#cyclesb"
+get "/welcome/southbeach/yoga" => "welcome#yogasb"
+get "/welcome/southbeach/pilates" => "welcome#pilatessb"
+get "/welcome/southbeach/barre" => "welcome#barresb"
+get "/welcome/southbeach/boxing" => "welcome#boxingsb"
 
 
 

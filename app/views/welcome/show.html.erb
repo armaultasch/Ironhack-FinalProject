@@ -134,11 +134,19 @@
 	
 	<% @activity_tmr.each do |tmr|%>
 			<li class="class-time scrollable-menu">
+				<%= tmr.name%><br>
 				<%= tmr.activity%><br>
 				<%= tmr.time.strftime("%A, %B %d %I:%M%P") %>
 				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= tmr.lat %> ,<%= tmr.lng %>"><%= tmr.address%></a><br>
 	
 		<img src="/assets/phone.png" height="20" width="20"><%= tmr.phone%><br>
+		<div class="dropdown platform">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Description</a>
+          <div class="dropdown-menu">
+            <p><%= tmr.description%></p>
+            
+            </div>
+        </div>
 		
 
 			</li>
@@ -159,11 +167,12 @@
 	<% @other_activity.each do |show| %>
 	<li class="class-time scrollable-menu">
 		<%= show.name %><br>
+		<%= show.activity %><br>
+		<%= show.time.strftime("%A, %B %d %I:%M%P") %><br>
 		<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= show.lat %> ,<%= show.lng %>"><%= show.address%></a><br>
 		<img src="/assets/phone.png" height="20" width="20"><%= show.phone%><br>
-		<%= show.activity %><br>
-		<%= show.area %><br>
-		<%= show.time.strftime("%A, %B %d %I:%M%P") %><br>
+		
+		
 		<div class="dropdown platform">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Platform">Description</a>
           <div class="dropdown-menu">

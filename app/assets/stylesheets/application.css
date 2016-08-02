@@ -335,7 +335,7 @@ html {
   background-color: #B0C4DE;
   border-radius: 10px;
   text-align: center;
-  height: 150px;
+  height: 160px;
   margin: right;
   width: 200;
   border: 3px solid green;
@@ -352,11 +352,37 @@ html {
     min-height: 650px;
     width: 90%;
     opacity: 0.9;
-    margin: 20px;
-    padding: 10px 20px 10px 10px;
+    margin: 10px;
+    padding: 10px 20px 10px 0px;
     border-right: 2px solid;
     border-color: #003e7b;
     text-align: center;
+
+ 
+
+}
+
+.tmr-class {
+    min-height: 650px;
+    width: 90%;
+    opacity: 0.9;
+    margin: 10px;
+ /*   padding: 10px 20px 10px 5px;*/
+    border-right: 2px solid;
+    border-color: #003e7b;
+    text-align: center;
+
+}
+
+.all-classes {
+    min-height: 650px;
+    width: 90%;
+    opacity: 0.9;
+    margin-right: 20px;
+    border-right: 2px solid;
+    border-color: #003e7b;
+    text-align: center;
+    padding-right: 40px;
 
  
 
