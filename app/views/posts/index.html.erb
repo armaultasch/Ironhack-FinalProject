@@ -62,17 +62,28 @@
   </div>
 </nav>
 </div>
+<div class="new-post">
 
-<h1> Posts </h1>
 <div class="row">
+
+	<div class="col-xs-4">
+		<h1> Reviews </h1>
 <ul>
 	<% @posts.each do |post| %>
 		<li class = "js-post" data-id = "<%=post.id%>"><%= post.email %><br><%= post.description %></li>
 		
 	<%end%>
 </ul>
+
+<a href="/posts/new">New Post</a><br>
+
 </div>
-<%= link_to "Add a new post", new_post_path %><br>
+<div class="col-xs-4">
+	<h1> Restaurants </h1>
+</div>
+
+</div>
+</div>
 
 
 <a href="/">

@@ -62,24 +62,37 @@
   </div>
 </nav>
 </div>
-<div class="container-fluid top home">
+<div class="container-fluid top new-post">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <h1 class="text-center" id="headline">
-          <h1>Post A New Review!</h1>
+        	<br>
+        	<br>
+          <h1>Share your thoughts!</h1>
+          <form>
+		<h3>Post A New Review:</h3>
 
+	<h3>
 <%= form_for @posts do |f| %>
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field :name %><br>
+	<br>
 
 	<%= f.label :email %>
 	<%= f.text_field :email, :required => true%>
+	<br>
 
-	<%= f.label :description %>
-	<%= f.text_area :description, :required => true%>
+	<br>
+
+	<%= f.label :thoughts %>
+	<%= f.text_area :description, :required => true%><br>
+	<br>
+	
 	<%= f.button %>
 <% end %>
+</h3>
+</form>
         <br>
 
         </h3></h1></br>
