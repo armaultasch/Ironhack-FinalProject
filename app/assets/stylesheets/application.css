@@ -338,7 +338,7 @@ html {
   height: 160px;
   margin: right;
   width: 200;
-  border: 3px solid green;
+  border: 3px solid #191970;
   padding-right: 15px;
 
 
@@ -352,7 +352,7 @@ html {
     min-height: 650px;
     width: 90%;
     opacity: 0.9;
-    margin: 10px;
+    margin: 20px;
     padding: 10px 20px 10px 0px;
     border-right: 2px solid;
     border-color: #003e7b;
@@ -366,8 +366,8 @@ html {
     min-height: 650px;
     width: 90%;
     opacity: 0.9;
-    margin: 10px;
- /*   padding: 10px 20px 10px 5px;*/
+    margin: 20px;
+ 
     border-right: 2px solid;
     border-color: #003e7b;
     text-align: center;
@@ -379,12 +379,11 @@ html {
     width: 90%;
     opacity: 0.9;
     margin-right: 20px;
-    border-right: 2px solid;
+    
     border-color: #003e7b;
     text-align: center;
-    padding-right: 40px;
-
- 
+    
+  
 
 }
 
@@ -454,7 +453,7 @@ p, ul, li {
     width: 90%;
     opacity: 0.9;
     margin: 20px;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 15px 10px 0px;
     border-right: 2px solid;
     border-left: 2px solid;
     border-color: #003e7b;
@@ -466,7 +465,7 @@ p, ul, li {
     width: 90%;
     opacity: 0.9;
     margin: 20px;
-    padding: 10px 10px 10px 20px;
+    padding: 10px 10px 10px 0px;
     border-left: 2px solid;
     border-color: #003e7b;
 }
