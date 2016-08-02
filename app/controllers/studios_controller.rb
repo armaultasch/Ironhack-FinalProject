@@ -1,4 +1,8 @@
-class StudioController < ApplicationController
+class StudiosController < ApplicationController
+
+	def show
+		render "show"
+	end
 	def brickell
 		areas = Studio.where(area: "Brickell")
 		
@@ -26,6 +30,4 @@ class StudioController < ApplicationController
 		render json: areas.to_json
 
 	end
-
-
 end

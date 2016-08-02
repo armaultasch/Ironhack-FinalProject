@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root to: "welcome#index"
 resources :welcome 
-
+resources :posts
 resources :studios 
-get "/api/studios/brickell" => "studio#brickell"
-get "/api/studios/downtown" => "studio#downtown"
-get "/api/studios/wynwood" => "studio#wynwood"
+get "/api/studios/brickell" => "studios#brickell"
+get "/api/studios/downtown" => "studios#downtown"
+get "/api/studios/wynwood" => "studios#wynwood"
 get "/api/studios/southbeach" => "studio#southbeach"
 
 
