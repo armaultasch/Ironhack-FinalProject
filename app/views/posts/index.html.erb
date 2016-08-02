@@ -63,13 +63,15 @@
 </nav>
 </div>
 
+<h1> Posts </h1>
+<div class="row">
 <ul>
 	<% @posts.each do |post| %>
-		<li class = "js-post" data-id = "<%=post.id%>"><%= post.email %><%= post.description %></li>
+		<li class = "js-post" data-id = "<%=post.id%>"><%= post.email %><br><%= post.description %></li>
 		
 	<%end%>
 </ul>
-
+</div>
 <%= link_to "Add a new post", new_post_path %><br>
 
 

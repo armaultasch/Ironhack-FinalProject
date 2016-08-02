@@ -341,9 +341,21 @@ html {
   border: 3px solid #191970;
   padding-right: 15px;
 
-
 }
 
+.js-post {
+   background-color: #B0C4DE;
+  border-radius: 10px;
+  width: 300px;
+   padding: 10px 20px 10px 0px;
+  text-align: center;
+  
+
+
+  border: 3px solid #191970;
+
+
+}
 .navbar-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
