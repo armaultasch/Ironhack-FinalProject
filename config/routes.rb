@@ -7,7 +7,7 @@ resources :studios
 get "/api/studios/brickell" => "studios#brickell"
 get "/api/studios/downtown" => "studios#downtown"
 get "/api/studios/wynwood" => "studios#wynwood"
-get "/api/studios/southbeach" => "studio#southbeach"
+get "/api/studios/southbeach" => "studios#southbeach"
 
 
 get "/welcome/wynwood/yoga" => "welcome#yogawyn"
