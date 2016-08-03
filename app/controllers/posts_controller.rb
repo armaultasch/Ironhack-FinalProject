@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 		@posts = Post.new(user_params)
 
 		if @posts.save
-			redirect_to "/posts"
+			redirect_to "/"
 		else
 			render "new"
 		end

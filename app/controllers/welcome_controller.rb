@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 	def index
 		@studio_array = Studio.all
+		@posts = Post.all
 
 		render "index"
 	end

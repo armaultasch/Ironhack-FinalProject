@@ -338,6 +338,11 @@ html {
     max-height: 500px;
     overflow-x: hidden;
 }
+.scrollable-menu2 {
+   
+    max-height: 200px;
+    overflow-x: hidden;
+}
 .class-time {
   background-color: #B0C4DE;
   border-radius: 10px;
@@ -359,11 +364,17 @@ html {
   
 }
 
-form {
+/*form {
   border : 2px dashed #fff;
   padding : 5px;
   height: 400px;
   width: 900px;
+}*/
+
+.move {
+  padding-right: 40px;
+  text-align: center;
+  margin-left: -40px;
 }
 .navbar-default {
     background-color: #f8f8f8;

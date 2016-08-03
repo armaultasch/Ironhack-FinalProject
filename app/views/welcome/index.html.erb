@@ -55,7 +55,7 @@
          
             <li><a href="mailto:alison@sit2fit.co?Subject=Hello%20again" target="_top">Email Us</a></li>
            
-            <li><a href="/posts" target="_top">Blog</a></li>
+
            
           
     <li>
@@ -102,7 +102,30 @@
     </div>
   </div>
 </div>
+<div class="row new">
+  <div class="container-fluid">
+    <div class="col-xs-4 text-center">
+      <h1>FitFinder</h1>
+      <h2> Have anything to share about your experience using our site?  Any classes so amazing that you just can't stop thinking about it?  Let us and the rest of FitFinder users know!</h2>
+   
+    </div>
+    <div class="col-xs-3 text-center">
+  <h1> Reviews </h1>
 
+<ul class="scrollable-menu2">
+  <% @posts.each do |post| %>
+    <li class = "js-post" data-id = "<%=post.id%>"><%= post.email %><br><%= post.description %></li>
+    
+  <%end%>
+</ul>
+
+<%= link_to "Add a new post", new_post_path %><br>
+</div>
+<div class="col-xs-3">
+<img src = "/assets/thoughts.png">
+</div>
+</div>
+</div>
 <footer>
 
   <div class="footer-fix text-center footer">

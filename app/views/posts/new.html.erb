@@ -51,7 +51,7 @@
          
             <li><a href="mailto:alison@sit2fit.co?Subject=Hello%20again" target="_top">Email Us</a></li>
            
-            <li><a href="/posts" target="_top">Blog</a></li>
+           
            
           
     <li>
@@ -62,39 +62,29 @@
   </div>
 </nav>
 </div>
-<div class="container-fluid top new-post">
+<div class="container-fluid top home">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <h1 class="text-center" id="headline">
-        	<br>
-        	<br>
-          <h1>Share your thoughts!</h1>
-          <form>
-		<h3>Post A New Review:</h3>
-
-	<h3>
-<%= form_for @posts do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name %><br>
-	<br>
-
-	<%= f.label :email %>
-	<%= f.text_field :email, :required => true%>
-	<br>
-
-	<br>
-
-	<%= f.label :thoughts %>
-	<%= f.text_area :description, :required => true%><br>
-	<br>
-	
-	<%= f.button %>
-<% end %>
-</h3>
-</form>
+          Finding the best classes for <strong> YOU. </strong><br>
+         
+        <h3 class="text-center black editable" id="subheading">
+          FitFinder is a way to bring the classes available in the Miami area to your fingertips in seconds.  The NO COMMITMENT does not require any personal or payment information.  FitFinder will simply ask you where you are, and what type of exercise you enjoy, in hopes of finding the best studio for you.  <br>
+          <p></p>
+          Whether you are just visiting the Miami area, or you're looking for the occasional mix in everyday gym rotation - the FitFinder has you covered. A way to see what's happening near you, when you're available, whenever you want.
         <br>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          
         </h3></h1></br>
       
 
@@ -104,8 +94,21 @@
     </div>
   </div>
 </div>
+<div class="new">
+<h1>Add a New Review!</h1>
 
+<%= form_for @posts do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
 
+	<%= f.label :email %>
+	<%= f.text_field :email, :required => true%>
+
+	<%= f.label :description %>
+	<%= f.text_area :description, :required => true%>
+	<%= f.button %>
+<% end %>
+</div>
 <footer>
 
   <div class="footer-fix text-center footer">
