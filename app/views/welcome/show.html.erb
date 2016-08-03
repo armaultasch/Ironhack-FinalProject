@@ -97,7 +97,7 @@
 				<%= today.name%><br>
 				<%= today.activity%><br>
 				<%= today.time.strftime("%A, %B %d %I:%M%P")%><br>
-				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= today.lng %>"><%= today.address%></a><br>
+				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= today.lat %> ,<%= @today.lng %>"><%= today.address%></a><br>
 
 				<img src="/assets/phone.png" height="20" width="20"><%= today.phone%><br>	
 				
@@ -130,7 +130,7 @@
 				<%= tmr.name%><br>
 				<%= tmr.activity%><br>
 				<%= tmr.time.strftime("%A, %B %d %I:%M%P") %>
-				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= tmr.lat %> ,<%= tmr.lng %>"><%= tmr.address%></a><br>
+				<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= tmr.lat %> ,<%= @tmr.lng %>"><%= tmr.address%></a><br>
 	
 		<img src="/assets/phone.png" height="20" width="20"><%= tmr.phone%><br>
 		<div class="dropdown platform">
@@ -162,7 +162,7 @@
 		<%= show.name %><br>
 		<%= show.activity %><br>
 		<%= show.time.strftime("%A, %B %d %I:%M%P") %><br>
-		<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= show.lat %> ,<%= show.lng %>"><%= show.address%></a><br>
+		<img src="/assets/location.png" height="20" width="20"><a href="http://maps.google.com/maps?q=<%= show.lat %> ,<%= @show.lng %>"><%= show.address%></a><br>
 		<img src="/assets/phone.png" height="20" width="20"><%= show.phone%><br>
 		
 		
