@@ -377,6 +377,11 @@ html {
   text-align: center;
   margin-left: -200px;
 }
+.move-again {
+  /*adding-right: 40px;*/
+  /*text-align: center;*/
+  margin-right: -400px;
+}
 .navbar-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
