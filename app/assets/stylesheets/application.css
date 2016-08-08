@@ -365,6 +365,14 @@ html {
   
 }
 
+.new {
+  background-color: #B0C4DE;
+
+
+   padding: 10px 20px 10px 0px;
+  text-align: center;
+   border: 3px solid #191970;
+}
 /*form {
   border : 2px dashed #fff;
   padding : 5px;
