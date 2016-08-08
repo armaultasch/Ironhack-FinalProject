@@ -361,6 +361,7 @@ html {
   width: 400px;
    padding: 10px 20px 10px 0px;
   text-align: center;
+   border: 3px solid #191970;
   
 }
 
@@ -374,7 +375,7 @@ html {
 .move {
   padding-right: 40px;
   text-align: center;
-  margin-left: -40px;
+  margin-left: -200px;
 }
 .navbar-default {
     background-color: #f8f8f8;
