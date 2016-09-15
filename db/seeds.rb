@@ -526,7 +526,13 @@ SoulSA = Studio.create(name: "Soul Cycle", address: "120 SW 8th St, Miami, FL 33
 
 
 
-
+PostA = Post.create(name: "Alison", email: "alison@alison.com", description: "Easiest to Use")
+PostB = Post.create(name: "Jason", email: "jason@jason.com", description: "So glad they have co-ed stuff like boxing!")
+PostC = Post.create(name: "Max", email: "max@max.com", description: "Made me want to take a barre class! ha!")
+PostD = Post.create(name: "Carly", email: "carcar@carly.com", description: "So many options!")
+PostE = Post.create(name: "Katie", email: "katie@katy.com", description: "Will you have a muscle pump option!?")
+PostF = Post.create(name: "Nicole", email: "nicole@cole.com", description: "Such variety!")
+PostG = Post.create(name: "John", email: "jon@noh.com", description: "comment")
 
 
 
